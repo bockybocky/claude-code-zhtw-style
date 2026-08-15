@@ -2,7 +2,7 @@
 
 用 Claude Code 的 output style 功能，把「AI 助理該怎麼跟你說話」寫成一個檔案。這個 repo 是我們實際在用的版本，含完整的痛點、設計想法與安裝步驟。
 
-檔案只有一個：[`output-styles/iris.md`](output-styles/iris.md)。
+檔案只有一個：[`output-styles/zhtw-style.md`](output-styles/zhtw-style.md)。
 
 ## 痛點：為什麼要管 AI 的說話方式
 
@@ -42,13 +42,13 @@
    mkdir -p ~/.claude/output-styles
    ```
 
-2. 把 [`output-styles/iris.md`](output-styles/iris.md) 複製進去：
+2. 把 [`output-styles/zhtw-style.md`](output-styles/zhtw-style.md) 複製進去：
 
    ```bash
-   cp output-styles/iris.md ~/.claude/output-styles/
+   cp output-styles/zhtw-style.md ~/.claude/output-styles/
    ```
 
-3. 在 Claude Code 裡執行 `/config`，找到「輸出風格（Output style）」，選「Iris 公司風格」。
+3. 在 Claude Code 裡執行 `/config`，找到「輸出風格（Output style）」，選「繁中簡明風格」。
 
 改了檔案內容之後，重選一次風格或開新 session 才會生效。
 
@@ -69,11 +69,11 @@ description: 一句話說明
 
 ## 改成你自己的版本
 
-`iris.md` 裡有幾條是我們的環境特化，改掉就能通用：
+`zhtw-style.md` 裡有幾條是我們的環境特化，改掉就能通用：
 
 - 「金額單位一律億美元」——投資研究場景的慣例，不需要就刪。
 - 收據文化那節引用了我們的派工詞彙（lane、機械／判斷），可以整節刪掉，或換成你自己的檢查格式。
-- 「Iris」是我們給助理取的名字，`name` 欄位隨你改。
+- 風格名稱由 frontmatter 的 `name` 欄位決定，隨你改。
 
 ## License
 
